@@ -49,7 +49,7 @@ var KLINKZgetlinkfeed =new Array();
 function GETurlKLINKZ(datajson){
 var KLINKZlinktag = document.getElementsByTagName("a"), KLINKZsemuaartikel = datajson.feed.openSearch$totalResults.$t;
  for(var i = 0; i < KLINKZsemuaartikel; i++) {
-  var KLINKZurlartikel, KLINKZsemualink = datajson.feed.entry[i].link.length;
+  var KLINKZurlartikel, KLINKZsemualink = datajson.feed.entry[i][0].link.length;
   for (var s = 0; s < KLINKZsemualink; s++) {
    if(datajson.feed.entry[i].link[s].rel == 'alternate') {
     KLINKZurlartikel = datajson.feed.entry[i].link[s].href;
